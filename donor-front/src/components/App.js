@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Menu from './Menu/Menu';
 import logo from './Menu/logo.png';
 
-function App() {
+class App extends Component {
+  render() {
     let links = [
       { label: 'Início', link: '#inicio', active: false},
       { label: 'Login/Cadastro', link: '#Login_Cadastro', active: false},
@@ -18,6 +19,6 @@ function App() {
     </div>
     </div>
   );
-}
+}};
 
 export default App;
