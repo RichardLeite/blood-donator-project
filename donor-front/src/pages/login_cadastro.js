@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const login_cadastro = () => (
-    <div className="title">
-        <h4>Login/Cadastro</h4>
-        <p>Aqui será a tela de Login/Cadastro</p>
-    </div>
-);
+export class login_cadastro extends Component {
+    render() {
+        return (
+            <center>
+            <div>
+                <h4>Login/Cadastro</h4>
+                <p>Aqui será a tela de Login/Cadastro</p>
+            </div>
+            </center>
+        )
+   }
+};
 
 export default login_cadastro;

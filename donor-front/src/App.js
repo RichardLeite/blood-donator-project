@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import Inicio from './pages/inicio';
+import {BrowserRouter as Router } from 'react-router-dom';
 import Routes from './components/routes';
 
-const App = () => (
-    <div className= 'App'>
-      <Inicio />
-      <Routes /> 
-    </div> 
-);
+
+class App extends Component {
+  render() {
+      return (
+          <Router>
+              <div>
+                  <Routes/>
+              </div>
+          </Router>
+      );
+  }
+}
+
 export default App;
