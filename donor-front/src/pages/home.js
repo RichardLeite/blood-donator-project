@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import './css/home.css'
 
 export class Home extends Component {
     render() {
         return (
+            <center>
             <div className = 'home'>
                 <h4>Blood Donator Project</h4>
                 <div className = 'center'>
@@ -12,6 +12,7 @@ export class Home extends Component {
 
                 </div>
             </div>
+            </center>
         )
    }
 };
