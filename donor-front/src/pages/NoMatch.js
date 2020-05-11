@@ -5,7 +5,7 @@ export class NoMatch extends Component {
         return (
             <center>
             <div>
-                <h3>Ops. Página não encontrada!</h3>
+                <h3>Ops... Página não encontrada!</h3>
                 <p> Provalmente a página que você está tentando acessar não existe.</p>
             </div>
             </center>

@@ -62,14 +62,18 @@
 }
 
 .menu__link:hover {
-    color: red;
+    color: #ff4a5d;
+    border-top: 4px solid #ff4a5d;
+    border-bottom: 4px solid #ff4a5d;
+    font-weight: 700;
+    transition: all 0.2s;
 }
 
-.menu__link--active {
-    color: red;
-    border-top: 4px solid red;
+/* .menu__link--active {
+    color: #ff4a5d;
+    border-top: 4px solid #ff4a5d;
     font-weight: 700;
-}
+} */
 
 .menu__logo {
     text-indent: -9999999px;
@@ -80,32 +84,4 @@
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
-}
-
-.menu__search-button {
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    border: 1px solid #c8c9ce;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.menu__search-form {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    padding: 10px;
-    background-color: white;
-}
-
-.menu__search-input {
-    outline: none;
-    border: 1px solid #c8c9ce;
-    font-size: 18px;
-    padding: 5px;
-    font-weight: 300;
 }
