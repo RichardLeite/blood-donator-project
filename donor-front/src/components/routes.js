@@ -7,6 +7,8 @@ import orientacoes from '../pages/orientacoes';
 import quem_somos from '../pages/quem_somos';
 import NoMatch from '../pages/NoMatch';
 import Menu from '../components/Menu/Menu';
+import agendamento from '../pages/agendamento';
+import meus_dados from '../pages/meus_dados';
 import logo from '../components/Menu/logo.png';
 import  '../components/Menu/Menu.css'
 
@@ -30,6 +32,8 @@ export class Routes extends Component {
             <Route  path="/login_cadastro" component= {login_cadastro} />
             <Route  path="/orientacoes" component= {orientacoes} />
             <Route  path="/quem_somos" component= {quem_somos} />
+            <Route  path="/agendamento" component= {agendamento} />
+            <Route  path="/meus_dados" component= {meus_dados} />
             <Route component={NoMatch}/>
         </Switch>
         </main>
