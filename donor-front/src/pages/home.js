@@ -7,7 +7,7 @@ export class Home extends Component {
             <center>
             <div className = 'pagina'>
                 <div>
-                {/* Será inserida uma imagem aqui */}
+                {/* Será inserida uma imagem aqui! */}
                 </div>
                 <div className = 'botoes'>
                  <button > Salve uma Vida </button>
