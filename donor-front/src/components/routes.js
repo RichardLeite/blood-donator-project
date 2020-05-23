@@ -37,6 +37,7 @@ export class Routes extends Component {
             <Route component={NoMatch}/>
         </Switch>
         </main>
+                      
         )
     }
 };
