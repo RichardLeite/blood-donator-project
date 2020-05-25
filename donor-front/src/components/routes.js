@@ -9,6 +9,7 @@ import NoMatch from '../pages/NoMatch';
 import Menu from '../components/Menu/Menu';
 import agendamento from '../pages/agendamento';
 import meus_dados from '../pages/meus_dados';
+import login_cadastroCH from '../pages/login_cadastroCH';
 import logo from '../components/Menu/logo.png';
 import  '../components/Menu/Menu.css'
 
@@ -34,6 +35,7 @@ export class Routes extends Component {
             <Route  path="/quem_somos" component= {quem_somos} />
             <Route  path="/agendamento" component= {agendamento} />
             <Route  path="/meus_dados" component= {meus_dados} />
+            <Route  path="/login_cadastroCH" component= {login_cadastroCH} />
             <Route component={NoMatch}/>
         </Switch>
         </main>
