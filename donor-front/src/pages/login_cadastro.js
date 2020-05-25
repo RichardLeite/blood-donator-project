@@ -6,7 +6,7 @@ export class login_cadastro extends Component {
             <center>
             <div>
                 <h4>Login/Cadastro</h4>
-                <p>Aqui será a tela de Login/Cadastro</p>
+                <p> Será modificado!</p>
             </div>
             </center>
         )
