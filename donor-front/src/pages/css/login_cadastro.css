@@ -1,0 +1,70 @@
+.cadastro{
+    background-color: white;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    width: 490px;
+    height: 470px;
+    border-left: 28px solid white;
+    border-right: 28px solid white;
+    float: left;
+}
+
+.login {
+    background-color: white;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    width: 490px;
+    height: 470px;
+    border-left: 28px solid white;
+    border-right: 28px solid white;
+    float: right;
+}
+
+.pagina{
+    border-bottom: 30px;
+    padding-top: 20px;
+}
+
+.trocalogin{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff4a5d;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.links{
+    text-decoration: none;
+
+}
+
+input{
+    border-color: #ff4a5d;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+input:focus {
+    outline: thin dotted;
+       outline: 0px auto -webkit-focus-ring-color;
+       outline-offset: 0px;
+   }
+
+div.cadastro p{
+    font-weight: 700;
+}
+
+div.login p{
+    font-weight: 700;
+}
+
+div.login button{
+    margin-top: 20px;
+}
+
+div.cadastro button{
+    margin-top: 20px;
+}

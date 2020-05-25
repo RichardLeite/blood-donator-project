@@ -7,8 +7,7 @@ export class Home extends Component {
     render() {
         return (
             <center>
-            <div className = 'pagina'>
-                <div></div>
+            <div id='home'>
                 <div className = 'botoes'>
                     <Link to='/agendamento' className='links'>
                         <button > Salve uma Vida </button></Link>
