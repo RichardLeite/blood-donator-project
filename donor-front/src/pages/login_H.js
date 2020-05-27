@@ -1,28 +1,33 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import './css/login.css'
 
-export class login_cadastroCH extends Component {
+export class login_cadastroH extends Component {
     render() {
         return (
             <center>
             <div className='pagina'>
-            <div className='cadastro'>
+            <div className='cadastros'>
                 <h1>Cadastro</h1>
                 <p>Razão Social</p><input></input>
                 <p>E-mail</p><input></input>
                 <p>Senha</p><input></input>
                 <p>Repita a Senha</p><input></input>
-                <button >fazer cadastro</button>
+                <Link to='/cadastro_h' className='links'>
+                <button >continuar cadastro</button>
+                </Link>
             </div>
             <div className='login'>
                 <h1>Login</h1>
-                <Link to='/login_cadastro' className='links'>
+                <Link to='/login_d' className='links'>
                 <p className='trocalogin'> Não é Hemocentro? Clique aqui pra fazer login ou cadastro como Doador!</p>
                 </Link>
                 <br></br>
                 <p>Email ou CNPJ</p><input></input>
                 <p>Senha</p><input></input>
-                <button > fazer Login </button>
+                <Link to='/meus_dados_d' className='links'>
+                <button >fazer login</button>
+                </Link>
             </div>
             </div>
             </center>
@@ -30,4 +35,4 @@ export class login_cadastroCH extends Component {
    }
 };
 
-export default login_cadastroCH;
+export default login_cadastroH;
