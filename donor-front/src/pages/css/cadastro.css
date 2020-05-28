@@ -3,7 +3,7 @@
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     width: 490px;
-    height: 530px;
+    height: 470px;
     border-left: 28px solid white;
     border-right: 28px solid white;
 }
@@ -16,10 +16,6 @@ div.cadastro button{
     padding-top: 20px;
 }
 
-.center_D {
-    margin-top: 15%;
-}
-
 .center_H {
-    margin-top: 20%;
+    margin-top: 10%;
 }
