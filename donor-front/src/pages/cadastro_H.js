@@ -8,9 +8,9 @@ export class cadastroC extends Component {
             <center>
             <div className='cadastro'>
                 <h1>Cadastro</h1>
-                <p>CNPJ</p><input></input>
-                <p>Telefone</p><input></input>
-                <br></br>
+                <p className='center_H'>CNPJ</p><input></input>
+                <p>Senha</p><input></input>
+                <p>Repita a Senha</p><input></input>
                 <Link to='/login_h' className='links'>
                 <button >fazer cadastro</button>
                 </Link>

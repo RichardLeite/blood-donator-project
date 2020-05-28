@@ -9,6 +9,10 @@
     float: left;
 }
 
+.cadastro_login {
+    margin-top: 116px;
+}
+
 .login {
     background-color: white;
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
@@ -56,6 +60,6 @@ div.login button{
     margin-top: 20px;
 }
 
-div.cadastro button{
+div.cadastros button{
     margin-top: 20px;
 }
