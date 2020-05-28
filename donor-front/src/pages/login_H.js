@@ -9,10 +9,8 @@ export class login_cadastroH extends Component {
             <div className='pagina'>
             <div className='cadastros'>
                 <h1>Cadastro</h1>
-                <p>Razão Social</p><input></input>
+                <p  className='cadastro_login'>Razão Social</p><input></input>
                 <p>E-mail</p><input></input>
-                <p>Senha</p><input></input>
-                <p>Repita a Senha</p><input></input>
                 <Link to='/cadastro_h' className='links'>
                 <button >continuar cadastro</button>
                 </Link>
