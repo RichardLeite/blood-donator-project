@@ -3,7 +3,7 @@
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     width: 1000px;
-    height: 3000px;
+    height: 3300px;
     border-left: 28px solid white;
     border-right: 28px solid white;
 }
@@ -54,6 +54,18 @@ img {
     margin-bottom: 20px;
     margin-top: 25px;
     font-style:italic;
+}
+
+#amigos {
+    position:relative; top:30px;
+}
+
+#logo {
+    position:relative; top:30px;
+    border-style: none;
+    box-shadow: none;
+    width: 30%;
+    height: 30%;
 }
 
 #amigo1 p{

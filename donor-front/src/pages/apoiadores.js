@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './css/apoiadores.css';
-import Ipg from "../components/img/ipg.jpg";
-import metrocamp from "../components/img/metrocamp.png";
+import Ipg from "../img/ipg.jpg";
+import metrocamp from "../img/metrocamp.png";
 export class Apoiadores extends Component {
     render() {
         return (
