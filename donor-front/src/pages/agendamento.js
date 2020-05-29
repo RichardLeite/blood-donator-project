@@ -44,6 +44,7 @@ export class agendamento extends Component {
                 <p>Bairro</p><input></input>
                 <p>Cidade</p><input></input>
                 <p>Estado</p><input></input>
+                <p>Telefone/Celular para Contato</p><input></input>
                 <p>Data que pretende o sangue</p><input type='date'></input>
                 <p>Horário de disponibilidade para doação</p><input type='time'></input>
                 <br></br>
