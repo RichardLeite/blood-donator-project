@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export class meus_dados extends Component {
+export class meus_dados_H extends Component {
     render() {
         return (
             <center>
@@ -13,4 +13,4 @@ export class meus_dados extends Component {
    }
 };
 
-export default meus_dados;
+export default meus_dados_H;

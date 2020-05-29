@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import './css/quem_somos.css';
-import beletatti from "../components/img/Beletatti.png";
-import souza from "../components/img/souza.jpg";
-import Luccas from "../components/img/luccas.jpg";
-import carlos from "../components/img/carlos.jpg";
-import gui from "../components/img/gui.jpg";
+import logo from "../img/logo.png";
+import beletatti from "../img/Beletatti.png";
+import souza from "../img/souza.jpg";
+import Luccas from "../img/luccas.jpg";
+import carlos from "../img/carlos.jpg";
+import gui from "../img/gui.jpg";
 
 export class quem_somos extends Component {
     render() {
@@ -12,13 +13,16 @@ export class quem_somos extends Component {
             <center>
             <div id="fundo">
                 <div className="quem_somos">
-                     <h1>Quem Somos ?</h1>
-                     <p className="quem_somos"><strong>5 amigos</strong> preocupados com a escassez na <strong>doação de sangue global</strong>, decidiu desenvolver uma plataforma para incentivar as pessoas a <strong>doarem sangue no Brasil</strong>. Com uma grande preocupação em incentivar as <strong>pessoas a doarem</strong>, iniciamos um processo de pesquisas sobre o maior problema. Segundo pesquisas, 6 em cada 10 doadores, são voluntários (ou espontâneos, aqueles que doam com frequência sem se importar com quem vai receber o sangue). 
+                
+                    <h1>Quem Somos ?</h1>
+                    <img id='logo' src={logo} alt="Blood Donator"/>
+                    <p className="quem_somos" id="amigos"><strong>5 amigos</strong> preocupados com a escassez na <strong>doação de sangue global</strong>, decidiu desenvolver uma plataforma para incentivar as pessoas a <strong>doarem sangue no Brasil</strong>. Com uma grande preocupação em incentivar as <strong>pessoas a doarem</strong>, iniciamos um processo de pesquisas sobre o maior problema. Segundo pesquisas, 6 em cada 10 doadores, são voluntários (ou espontâneos, aqueles que doam com frequência sem se importar com quem vai receber o sangue). 
                         Você sabia que com 450 ml de sangue é possível salvar 4 vidas?
                         Queremos educar as pessoas, você pode fazer muito, com pouco. Em nossa plataforma, 
                         você consegue agendar para que um dos agentes cadastrados na plataforma colha o sangue em sua 
                         residência. Após a doação, você tem acesso à sua carteira de doador e ainda possui acesso a 
                         descontos em nossa aba de benefícios.</p>
+
                 </div>
                 <div className="quem_somos">
                     <h1>Quem são os 5 amigos ?</h1>

@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 import './css/home.css';
+import { Link } from 'react-router-dom';
+
 
 export class Home extends Component {
     render() {
         return (
             <center>
-            <div className = 'pagina'>
-                <div>
-                {/* Será inserida uma imagem aqui! */}
-                </div>
+            <div id='home'>
                 <div className = 'botoes'>
-                 <button > Salve uma Vida </button>
-                 <button> Meus Benefícios </button>
-
+                    <Link to='/agendamento' className='links'>
+                        <button > Salve uma Vida </button></Link>
+                    <Link to='/beneficios' className='links'>
+                        <button > Meus Benefícios </button></Link>
                 </div>
             </div>
             </center>

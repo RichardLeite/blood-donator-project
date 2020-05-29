@@ -2,13 +2,18 @@ import React, {Component} from 'react';
 import { Switch, Route } from 'react-router-dom';
 import home from '../pages/home';
 import apoiadores from '../pages/apoiadores';
-import login_cadastro from '../pages/login_cadastro';
+import login_D from '../pages/login_D';
+import login_H from '../pages/login_H';
+import cadastro_D from '../pages/cadastro_D';
+import cadastro_H from '../pages/cadastro_H';
 import orientacoes from '../pages/orientacoes';
 import quem_somos from '../pages/quem_somos';
 import NoMatch from '../pages/NoMatch';
 import Menu from '../components/Menu/Menu';
 import agendamento from '../pages/agendamento';
-import meus_dados from '../pages/meus_dados';
+import beneficios from '../pages/beneficios';
+import meus_dados_D from '../pages/meus_dados_D';
+import meus_dados_H from '../pages/meus_dados_H';
 import logo from '../components/Menu/logo.png';
 import  '../components/Menu/Menu.css'
 
@@ -29,14 +34,20 @@ export class Routes extends Component {
         <Switch>
             <Route exact path="/" component= {home} />
             <Route  path="/apoiadores" component= {apoiadores} />
-            <Route  path="/login_cadastro" component= {login_cadastro} />
+            <Route  path="/login_d" component= {login_D} />
+            <Route  path="/login_h" component= {login_H} />
+            <Route  path="/cadastro_d" component= {cadastro_D} />
+            <Route  path="/cadastro_h" component= {cadastro_H} />
             <Route  path="/orientacoes" component= {orientacoes} />
             <Route  path="/quem_somos" component= {quem_somos} />
             <Route  path="/agendamento" component= {agendamento} />
-            <Route  path="/meus_dados" component= {meus_dados} />
+            <Route  path="/beneficios" component= {beneficios} />
+            <Route  path="/meus_dados_d" component= {meus_dados_D} />
+            <Route  path="/meus_dados_h" component= {meus_dados_H} />
             <Route component={NoMatch}/>
         </Switch>
         </main>
+                      
         )
     }
 };
