@@ -6,8 +6,8 @@ export class meus_dados_D extends Component {
         return (
             <center>
             <div className='meus_dados'>
-                <h1 id="meus_dados">Meus Dados</h1>
-                
+                <h1 className="meus_dados_titulo">Meus Dados</h1>
+                <p> Aqui será a tela de Meu Dados!</p>
             </div>
             </center>
         )
