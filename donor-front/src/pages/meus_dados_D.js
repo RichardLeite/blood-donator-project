@@ -12,11 +12,12 @@ export class meus_dados_D extends Component {
                 <h1> Meus Dados </h1>
                 <div className='dados_d'>
                     <br></br>
-                    <p>Nome e Sobrenome</p>{/* <input placeholder="Nome e Sobrenome"></input>*/}<button> Alterar </button> 
-                    <p>CPF</p>{/* <input placeholder="CPF"></input>*/}<button> Alterar </button>
-                    <p>Email</p>{/* <input placeholder="Email"></input>*/}<button> Alterar </button>
-                    <p>Data Nascimento</p>{/* <input placeholder="Data Nascimento"></input>*/}<button> Alterar </button>
-                    <p>Senha</p>{/* <input type='password' placeholder="Senha"></input>*/}<button> Alterar </button>
+                    <p>Nome e Sobrenome</p><input placeholder="Seu Nome e Sobrenome"></input>
+                    <p>CPF</p><input placeholder="Seu CPF"></input>
+                    <p>Email</p><input placeholder="Seu Email"></input>
+                    <p>Data Nascimento</p><input type='date'></input>
+                    <p>Senha</p><input type='password' placeholder="Sua Senha"></input><br></br>
+                    <button> Salvar Alterações </button>
                 </div>
             </div>
             

@@ -49,11 +49,10 @@ output:focus {
 }
 
 .dados_d button {
-    width: 100px;
-    height: 25px;
-    margin: none;
+    margin-top: 20px;
 }
 
 .meus_dados input {
-    padding: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
