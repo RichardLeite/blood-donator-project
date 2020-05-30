@@ -24,7 +24,7 @@ export class login_cadastro extends Component {
                 </Link>
                 <br></br>
                 <p>Email ou CPF</p><input  type='email'></input>
-                <p>Senha</p><input></input>
+                <p>Senha</p><input type='password'></input>
                 <Link to='/meus_dados_d' className='links'>
                 <button >fazer Login</button>  
                 </Link>
