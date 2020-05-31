@@ -7,8 +7,9 @@ export class orientacoes extends Component {
     render() {
         return (
             <center>
+        <div className='PaginaOrientacoes'>
          <div className="OrientacoesTexto">
-                <h1>REQUISITOS PARA DOAR SANGUE</h1>
+                <h1>ORIENTAÇÕES PARA DOAR SANGUE</h1>
                 <p>Antes de doar, certifique-se de que você atende às condições especificadas a seguir:</p>
             </div>
                 <div className="orientacoes">
@@ -77,6 +78,7 @@ export class orientacoes extends Component {
                         <p> AIDS, Doença de Chagas</p>
                     </li>
                 </ul>
+                </div>
                 </div>
             </center>
         )
