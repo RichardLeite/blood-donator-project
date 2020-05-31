@@ -9,6 +9,15 @@
     margin-bottom: 20px;
 }
 
+.PaginaOrientacoes img {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    border: 0;
+    border-style: none;
+    padding-top: 5px;
+}
+
 .OrientacoesTexto h1 {
     padding-top: 20px;
 }
