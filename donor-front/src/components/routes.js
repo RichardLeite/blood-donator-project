@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Router } from 'react-router-dom';
 import home from '../pages/home';
 import apoiadores from '../pages/apoiadores';
 import login_D from '../pages/login_D';
@@ -17,6 +17,7 @@ import meus_dados_D from '../pages/meus_dados_D';
 import meus_dados_H from '../pages/meus_dados_H';
 import logo from '../components/Menu/logo.png';
 import  '../components/Menu/Menu.css'
+import history from './history'
 
 
 const links = [
@@ -30,8 +31,9 @@ const links = [
 export class Routes extends Component {
     render() {
         return (
-            <main className="container">
-                <Menu links= {links} logo={logo}/>
+            <main className ="container">
+                <Menu links = {links}  logo={logo}/>
+            <Router history = {history}>
         <Switch>
             <Route exact path="/" component= {home} />
             <Route  path="/apoiadores" component= {apoiadores} />
@@ -48,6 +50,7 @@ export class Routes extends Component {
             <Route  path="/meus_dados_h" component= {meus_dados_H} />
             <Route component={NoMatch}/>
         </Switch>
+            </Router> 
         </main>
                       
         )

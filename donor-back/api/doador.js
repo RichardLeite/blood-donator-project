@@ -54,7 +54,7 @@ module.exports = app => {
     //index
     const get = (req, res) => {
         app.db('doadores')
-        .select('id', 'cpf', 'nome', 'email', 'data_nascimento')
+        .select('id', 'cpf', 'nome', 'email', 'data_nascimento', 'senha')
         .then(doadores => res.json({data:doadores}))//add o map pra alterar as colunas dos dados
         .catch(err => res.status(500).send(err))
     }
