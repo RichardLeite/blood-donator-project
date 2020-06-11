@@ -26,7 +26,8 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "pg": "^8.2.1",
-    "pm2": "^4.4.0"
+    "pm2": "^4.4.0",
+    "restify-cors-middleware": "^1.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
