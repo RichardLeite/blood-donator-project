@@ -6,8 +6,9 @@ exports.up = function(knex) {
         table.string('logradouro').notNull()
         table.integer('numero').notNull()
         table.string('complemento').notNull()
-        table.integer('id_doadores').references('id').inTable('doadores')
-        table.integer('id_agendamento').references('id').inTable('agendamentos')
+        table.integer('id_doadores').references('id').inTable('doadores').notNull()
+        table.integer('id_agendamento').references('id').inTable('agendamentos').notNull()
+        //adicionar o relacionamento com a tabela clinicas-hospitais
     })
   
 };

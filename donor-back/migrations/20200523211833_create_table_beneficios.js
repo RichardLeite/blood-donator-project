@@ -7,8 +7,8 @@ exports.up = function(knex) {
         table.integer('pontos').notNull()
         table.string('nome_produto').notNull()
         table.decimal('valor_produto').notNull()
-        table.integer('id_doadores').references('id').inTable('doadores')
-        table.integer('id_agendamento').references('id').inTable('agendamentos')
+        table.integer('id_doadores').references('id').inTable('doadores').notNull()
+        table.integer('id_agendamento').references('id').inTable('agendamentos').notNull()
     })
   
 };
