@@ -1,12 +1,13 @@
 module.exports = app => {
 
-    app.post('/signup', app.api.doador.save)
+    app.post('/signupd', app.api.doador.save)
+    app.post('/signuph', app.api.clinicaHospital.save)
     app.post('/signin', app.api.auth.signin)
     app.post('/validateToken', app.api.auth.validateToken)
 
     app.route('/doadores')
     .all(app.config.passport.authenticate())//não esquecer de colocar o authorization e bearer no insomnia
-    .post(app.api.doador.save)
+    // .post(app.api.doador.save)
     .get(app.api.doador.get)
 
     app.route('/doadores/:id')
@@ -16,7 +17,7 @@ module.exports = app => {
 //Cuidado com as ordem! 
     app.route('/clinicasHospitais')
     .all(app.config.passport.authenticate())
-    .post(app.api.clinicaHospital.save)
+    // .post(app.api.clinicaHospital.save)
     .get(app.api.clinicaHospital.get)
 
     app.route('/clinicasHospitais/:id')
