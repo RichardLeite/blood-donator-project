@@ -1,15 +1,18 @@
 import React, {Component} from 'react';
+import './css/home.css';
+import { Link } from 'react-router-dom';
+
 
 export class Home extends Component {
     render() {
         return (
             <center>
-            <div className = 'home'>
-                <h4>Blood Donator Project</h4>
-                <div className = 'center'>
-
-                <p>Aqui será a tela Inicial</p>
-
+            <div id='home'>
+                <div className = 'botoes'>
+                    <Link to='/agendamento' className='links'>
+                        <button > Salve uma Vida </button></Link>
+                    <Link to='/beneficios' className='links'>
+                        <button > Meus Benefícios </button></Link>
                 </div>
             </div>
             </center>
