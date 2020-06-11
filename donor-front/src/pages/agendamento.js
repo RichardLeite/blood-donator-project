@@ -4,6 +4,7 @@ import './css/agendamento.css';
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
+import history from '../components/history';
 
 axios.get('http://localhost:3333/agendamentos').then(function(data){
     console.log(data)
@@ -12,7 +13,13 @@ axios.get('http://localhost:3333/agendamentos').then(function(data){
 const agendamento = () => {
     const handleSubmit = values => {
         axios.post('http://localhost:3333/agendamentos', values)
-            .then(resp => console.log(resp))
+        .then(resp => { //console.log(resp)
+            const { data } = resp
+            if(data){
+                localStorage.setItem('token', data)
+                history.push('/endereco')
+             }
+        })
     }
     const validations = Yup.object().shape({
         peso: Yup.number('Digite um Peso válido (ex:50.00)')

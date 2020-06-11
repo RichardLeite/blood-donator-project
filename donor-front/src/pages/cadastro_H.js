@@ -1,9 +1,10 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './css/cadastro.css'
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
+import history from '../components/history';
 
 axios.get('http://localhost:3333/clinicasHospitais').then(function(data){
     console.log(data)
@@ -12,7 +13,12 @@ axios.get('http://localhost:3333/clinicasHospitais').then(function(data){
 const cadastroH = () => {
     const handleSubmit = values => {
         axios.post('http://localhost:3333/clinicasHospitais', values)
-            .then(resp => console.log(resp))
+        .then(resp => { //console.log(resp)
+            const { data } = resp
+            if(data){
+                history.push('/meus_dados_h')
+            }
+        })
     }
     const validations = Yup.object().shape({
         cnpj: Yup.string()
@@ -21,7 +27,6 @@ const cadastroH = () => {
         .required('O CNPJ é Obrigatório'),
         razao_social: Yup.string().required('A Razão Social é Obrigatório'),
         email: Yup.string().email('Digite um email válido').required('O Email é Obrigatório'),
-        data_nascimento: Yup.string().required('A Data de Nascimento é Obrigatória'),
         senha: Yup.string().min(8, 'Digite no minimo 8 caracteres').required('A Senha é Obrigatória'),
         confirmaSenha: Yup.string()
         .oneOf([Yup.ref('senha'), null],'As senhas não coincidem')
@@ -67,10 +72,13 @@ const cadastroH = () => {
                 </div>
             </Form>
         </Formik>
+        <Link to='/cadastro_d' className='links'>
+        <p className='trocalogin'> Cliquei aqui para fazer cadastro como Doador </p>
+        </Link>
         </div>
         </center>
     </>
 )
 }
 
-export default cadastroH;
+export default cadastroH

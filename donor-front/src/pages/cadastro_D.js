@@ -1,9 +1,10 @@
 import React from 'react';
 import './css/cadastro.css'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
+import history from '../components/history';
 
 axios.get('http://localhost:3333/doadores').then(function(data){
     console.log(data)
@@ -12,7 +13,12 @@ axios.get('http://localhost:3333/doadores').then(function(data){
 const cadastroD = () => {
     const handleSubmit = values => {
         axios.post('http://localhost:3333/doadores', values)
-            .then(resp => console.log(resp))
+        .then(resp => { //console.log(resp)
+            const { data } = resp
+            if(data){
+                history.push('/meus_dados_d')
+            }
+        })
     }
     const validations = Yup.object().shape({
         cpf: Yup.string()
@@ -72,6 +78,10 @@ const cadastroD = () => {
                 </div>
             </Form>
         </Formik>
+        <br></br>
+        <Link to='/cadastro_h' className='links'>
+        <p className='trocalogin'> Cliquei aqui para fazer cadastro como Hemocentro </p>
+        </Link>
         </div>
         </center>
     </>

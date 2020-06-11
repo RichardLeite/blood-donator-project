@@ -18,6 +18,7 @@ import meus_dados_H from '../pages/meus_dados_H';
 import logo from '../components/Menu/logo.png';
 import  '../components/Menu/Menu.css'
 import history from './history'
+import PrivateRoute from '../components/PrivateRoute';
 
 
 const links = [
@@ -43,11 +44,11 @@ export class Routes extends Component {
             <Route  path="/cadastro_h" component= {cadastro_H} />
             <Route  path="/orientacoes" component= {orientacoes} />
             <Route  path="/quem_somos" component= {quem_somos} />
-            <Route  path="/agendamento" component= {agendamento} />
-            <Route  path="/endereco" component= {endereco} />
-            <Route  path="/beneficios" component= {beneficios} />
-            <Route  path="/meus_dados_d" component= {meus_dados_D} />
-            <Route  path="/meus_dados_h" component= {meus_dados_H} />
+            <PrivateRoute  path="/agendamento" component= {agendamento} />
+            <PrivateRoute  path="/endereco" component= {endereco} />
+            <PrivateRoute  path="/beneficios" component= {beneficios} />
+            <PrivateRoute  path="/meus_dados_d" component= {meus_dados_D} />
+            <PrivateRoute  path="/meus_dados_h" component= {meus_dados_H} />
             <Route component={NoMatch}/>
         </Switch>
             </Router> 
