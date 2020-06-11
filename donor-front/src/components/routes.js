@@ -11,6 +11,7 @@ import quem_somos from '../pages/quem_somos';
 import NoMatch from '../pages/NoMatch';
 import Menu from '../components/Menu/Menu';
 import agendamento from '../pages/agendamento';
+import endereco from '../pages/endereco';
 import beneficios from '../pages/beneficios';
 import meus_dados_D from '../pages/meus_dados_D';
 import meus_dados_H from '../pages/meus_dados_H';
@@ -41,6 +42,7 @@ export class Routes extends Component {
             <Route  path="/orientacoes" component= {orientacoes} />
             <Route  path="/quem_somos" component= {quem_somos} />
             <Route  path="/agendamento" component= {agendamento} />
+            <Route  path="/endereco" component= {endereco} />
             <Route  path="/beneficios" component= {beneficios} />
             <Route  path="/meus_dados_d" component= {meus_dados_D} />
             <Route  path="/meus_dados_h" component= {meus_dados_H} />
