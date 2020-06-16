@@ -4,21 +4,21 @@ import './css/agendamento.css';
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
-import history from '../components/history';
+import history from '../components/auth/history';
 
-axios.get('http://localhost:3333/agendamentos').then(function(data){
-    console.log(data)
-})
+// axios.get('http://localhost:3333/agendamentos').then(function(data){
+//     console.log(data)
+// })
 
 const agendamento = () => {
+
     const handleSubmit = values => {
         axios.post('http://localhost:3333/agendamentos', values)
         .then(resp => { //console.log(resp)
-            const { data } = resp
-            if(data){
-                localStorage.setItem('token', data)
+            // const { data } = resp
+            // if(data){
                 history.push('/endereco')
-             }
+            //  }
         })
     }
     const validations = Yup.object().shape({
@@ -119,6 +119,10 @@ const agendamento = () => {
                 <p>Horário de disponibilidade para doação</p>
                 <Field type='time' name='horas_doacao'/>
                 <ErrorMessage component='span' name='horas_doacao'/>
+                <br></br>
+
+                {/* //<Field type='number' name='id_doadores'>`${id}`</Field>/> */}
+
                 <br></br>
                 <br></br>
                 <p className='trocalogin'> Você precisa cadastrar seu endereço antes de finalizar o Agendamento</p>

@@ -5,6 +5,7 @@ const PrivateRoute = props => {
     const isLogged = !!localStorage.getItem('token')
     return isLogged ? <Route { ...props }/> : <Redirect to='/login_d'/>
 
+
 }
 
 export default PrivateRoute;

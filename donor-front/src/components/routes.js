@@ -17,8 +17,10 @@ import meus_dados_D from '../pages/meus_dados_D';
 import meus_dados_H from '../pages/meus_dados_H';
 import logo from '../components/Menu/logo.png';
 import  '../components/Menu/Menu.css'
-import history from './history'
-import PrivateRoute from '../components/PrivateRoute';
+import history from './auth/history'
+import PrivateRoute from './auth/PrivateRoute';
+import logout from '../pages/logout';
+
 
 
 const links = [
@@ -27,6 +29,7 @@ const links = [
     { route: "/orientacoes", label: "Orientações"},
     { route: "/quem_somos", label: "Quem Somos"},
     { route: "/apoiadores", label: "Apoiadores"},
+    { route: "/logout", label: "logout"}
 ];
 
 export class Routes extends Component {
@@ -44,12 +47,15 @@ export class Routes extends Component {
             <Route  path="/cadastro_h" component= {cadastro_H} />
             <Route  path="/orientacoes" component= {orientacoes} />
             <Route  path="/quem_somos" component= {quem_somos} />
+            <Route  path="/logout" component= {logout} />
             <PrivateRoute  path="/agendamento" component= {agendamento} />
             <PrivateRoute  path="/endereco" component= {endereco} />
             <PrivateRoute  path="/beneficios" component= {beneficios} />
             <PrivateRoute  path="/meus_dados_d" component= {meus_dados_D} />
             <PrivateRoute  path="/meus_dados_h" component= {meus_dados_H} />
             <Route component={NoMatch}/>
+
+
         </Switch>
             </Router> 
         </main>

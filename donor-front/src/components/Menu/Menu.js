@@ -44,6 +44,7 @@ class Menu extends Component {
                     <li class="menu__list-item"><a class="menu__link" href="/orientacoes">Orientações</a></li>
                     <li class="menu__list-item"><a class="menu__link" href="/quem_somos">Quem Somos</a></li>
                     <li class="menu__list-item"><a class="menu__link" href="/apoiadores">Apoiadores</a></li>
+                    <li class="menu__list-item"><a class="menu__link" href="/logout">Logout</a></li>
                 </ul>
 
             </div>

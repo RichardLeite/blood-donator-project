@@ -4,21 +4,19 @@ import './css/login.css'
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
-import history from '../components/history';
+import history from '../components/auth/history';
+import store from '../components/auth/store'
+import { baseURL, token  } from '../service/apiBack'
 
-axios.get('http://localhost:3333/signin').then(function(data){
-    console.log(data)
-})
 
 const login_D = () => {
+
     const handleSubmit = values => {
-        axios.post('http://localhost:3333/signin', values)
-            .then(resp => { //console.log(resp)
-                const { data } = resp
-                if(data){
-                    localStorage.setItem('token', data)
-                    history.push('/meus_dados_d')
-                 }
+        axios.post(`${baseURL}/signind`, values)
+            .then(resp => { 
+                    store('user', resp.data)
+                    localStorage.setItem(token, JSON.stringify(resp.data))
+                    history.push('/')
             })
     }
     const validations = Yup.object().shape({
@@ -27,6 +25,7 @@ const login_D = () => {
         senha: Yup.string().required('A Senha é Obrigatória'),
         
     })
+
     return (
         <>
         <center>
@@ -48,9 +47,8 @@ const login_D = () => {
                 <ErrorMessage component='span' name='senha'/>
                 <br></br>
                 
-                {/* <Link to='/login_d' className='links'> */}
                 <button type='submit'>fazer login</button>
-                {/* </Link> */}
+
             </Form>
         </Formik>
         <br></br>
@@ -59,8 +57,8 @@ const login_D = () => {
         </Link>
         </div>
         </center>
-    </>
-)
+        </>
+    )
 }
 
 export default login_D;

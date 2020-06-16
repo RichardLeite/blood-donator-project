@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
-import history from '../components/history';
+import history from '../components/auth/history';
+import { baseURL } from '../service/apiBack'
 
-axios.get('http://localhost:3333/doadores').then(function(data){
-    console.log(data)
-})
+
+// axios.get('http://localhost:3333/doadores').then(function(data){
+//     console.log(data)
+// })
 
 const cadastroD = () => {
     const handleSubmit = values => {
-        axios.post('http://localhost:3333/doadores', values)
-        .then(resp => { //console.log(resp)
-            const { data } = resp
-            if(data){
-                history.push('/meus_dados_d')
-            }
+        axios.post(`${baseURL}/signupd`, values)
+        .then(resp => {
+            history.push('/meus_dados_d')
+
         })
     }
     const validations = Yup.object().shape({
@@ -72,9 +72,8 @@ const cadastroD = () => {
                 <ErrorMessage component='span' name='confirmaSenha'/>
                 <br></br>
                 
-                {/* <Link to='/login_d' className='links'> */}
                 <button type='submit'>fazer cadastro</button>
-                {/* </Link> */}
+
                 </div>
             </Form>
         </Formik>
@@ -84,8 +83,8 @@ const cadastroD = () => {
         </Link>
         </div>
         </center>
-    </>
-)
+        </>
+    )
 }
 
 export default cadastroD;

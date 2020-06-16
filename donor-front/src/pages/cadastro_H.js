@@ -4,20 +4,19 @@ import './css/cadastro.css'
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
-import history from '../components/history';
+import history from '../components/auth/history';
+import { baseURL } from '../service/apiBack'
 
-axios.get('http://localhost:3333/clinicasHospitais').then(function(data){
-    console.log(data)
-})
+// axios.get('http://localhost:3333/clinicasHospitais').then(function(data){
+//     console.log(data)
+// })
 
 const cadastroH = () => {
     const handleSubmit = values => {
-        axios.post('http://localhost:3333/clinicasHospitais', values)
-        .then(resp => { //console.log(resp)
-            const { data } = resp
-            if(data){
-                history.push('/meus_dados_h')
-            }
+        axios.post(`${baseURL}/signuph`, values)
+        .then(resp => {
+            history.push('/meus_dados_h')
+
         })
     }
     const validations = Yup.object().shape({

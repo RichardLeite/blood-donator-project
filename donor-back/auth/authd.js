@@ -1,11 +1,12 @@
 const { authSecret } = require('../.env')
 const jwt = require('jwt-simple')
 const bcrypt = require('bcrypt')
+const validateToken = require('./validateToken')
 
 module.exports = app => {
     const signin = async (req, res) => {
         if (!req.body.email || !req.body.senha){
-            return res.status(400).send('Informe usúario e senha!')
+            return res.status(400).send('Informe email e senha!')
         }
         const doador = await app.db('doadores')
         .where({email: req.body.email})
@@ -31,21 +32,8 @@ module.exports = app => {
             token: jwt.encode(payload, authSecret)
         })
     }
-        const validateToken = async (req, res) => {
-            const doadorData = req.body || null
-            try{
-                if(doadorData){
-                    if(new Date(token.exp * 1000) > new Date()){
-                        return res.send(true)
-                    }
-                }
-            }catch(e) {
-                //problema com o token
-            }
-
-            res.send(false)
-        }
+        validateToken()
    
 
-    return { signin, validateToken }
+    return { signin}
 }

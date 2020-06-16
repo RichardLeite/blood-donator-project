@@ -4,22 +4,23 @@ import './css/login.css'
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
-import history from '../components/history';
+import history from '../components/auth/history';
+import store from '../components/auth/store'
+import { baseURL, token  } from '../service/apiBack'
 
-axios.get('http://localhost:3333/signin').then(function(data){
-    console.log(data)
-})
+// axios.get('http://localhost:3333/signin').then(function(data){
+//     console.log(data)
+// })
 
 const login_H = () => {
+
     const handleSubmit = values => {
-        axios.get('http://localhost:3333/signin', values)
-        .then(resp => { //console.log(resp)
-            const { data } = resp
-            if(data){
-                localStorage.setItem('token', data)
-                history.push('/meus_dados_h')
-             }
-        })
+        axios.post(`${baseURL}/signinh`, values)
+            .then(resp => { 
+                    store('user', resp.data)
+                    localStorage.setItem(token, JSON.stringify(resp.data))
+                    history.push('/')
+            })
     }
     const validations = Yup.object().shape({
         email: Yup.string().email('Digite um email válido')

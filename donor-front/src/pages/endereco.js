@@ -4,7 +4,7 @@ import './css/agendamento.css';
 import { ErrorMessage, Formik, Form, Field, } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios";
-import history from '../components/history';
+import history from '../components/auth/history';
 
 axios.get('http://localhost:3333/endereco').then(function(data){
     console.log(data)
