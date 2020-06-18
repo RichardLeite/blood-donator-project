@@ -33,7 +33,21 @@ module.exports = app => {
         })
     }
 
-    validateToken()
+    // validateToken() 
+    //     const validateToken = async (req, res) => {
+    //     const doadorData = req.body || null
+    //     try{
+    //         if(doadorData){
+    //             if(new Date(token.exp * 1000) > new Date()){
+    //                 return res.send(true)
+    //             }
+    //         }
+    //     }catch(e) {
+    //         //problema com o token
+    //     }
+
+    //     res.send(false)
+    // }
    
 
     return { signin }

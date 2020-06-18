@@ -4,7 +4,7 @@ module.exports = app => {
     app.post('/signuph', app.api.clinicaHospital.save)
     app.post('/signind', app.auth.authd.signin)
     app.post('/signinh', app.auth.authh.signin)
-    app.post('/validateToken', app.auth.validateToken.validateToken)
+    app.post('/validateToken', app.auth.authd.validateToken)
 
     app.route('/doadores')
     .all(app.config.passport.authenticate())//não esquecer de colocar o authorization e bearer no insomnia

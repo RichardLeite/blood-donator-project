@@ -8,10 +8,6 @@ import history from '../components/auth/history';
 import store from '../components/auth/store'
 import { baseURL, token  } from '../service/apiBack'
 
-// axios.get('http://localhost:3333/signin').then(function(data){
-//     console.log(data)
-// })
-
 const login_H = () => {
 
     const handleSubmit = values => {

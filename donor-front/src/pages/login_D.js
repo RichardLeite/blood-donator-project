@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import axios from "axios";
 import history from '../components/auth/history';
 import store from '../components/auth/store'
-import { baseURL, token  } from '../service/apiBack'
+import { baseURL, token } from '../service/apiBack'
 
 
 const login_D = () => {
