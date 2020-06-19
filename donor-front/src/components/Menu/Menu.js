@@ -40,7 +40,7 @@ class Menu extends Component {
                 <ul class="menu__list">
 		{/* <li class="menu__list-item"><a class="menu__link menu__link--active" href="/">Início</a></li>	 */}
                     <li class="menu__list-item"><a class="menu__link " href="/">Início</a></li>
-                    <li class="menu__list-item"><a class="menu__link" href="/login_d">Login/Cadastro</a></li>
+                    {/* <li class="menu__list-item"><a class="menu__link" href="/login_d">Login/Cadastro</a></li> */}
                     <li class="menu__list-item"><a class="menu__link" href="/orientacoes">Orientações</a></li>
                     <li class="menu__list-item"><a class="menu__link" href="/quem_somos">Quem Somos</a></li>
                     <li class="menu__list-item"><a class="menu__link" href="/apoiadores">Apoiadores</a></li>

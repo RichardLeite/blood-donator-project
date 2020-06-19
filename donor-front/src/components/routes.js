@@ -39,7 +39,7 @@ export class Routes extends Component {
                 <Menu links = {links}  logo={logo}/>
             <Router history = {history}>
         <Switch>
-            <Route exact path="/" component= {home} />
+            <PrivateRoute exact  path="/" component= {home} />
             <Route  path="/apoiadores" component= {apoiadores} />
             <Route  path="/login_d" component= {login_D} />
             <Route  path="/login_h" component= {login_H} />

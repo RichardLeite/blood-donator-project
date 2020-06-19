@@ -15,7 +15,7 @@ const login_H = () => {
             .then(resp => { 
                     store('user', resp.data)
                     localStorage.setItem(token, JSON.stringify(resp.data))
-                    history.push('/')
+                    history.push('/meus_dados_h')
             })
     }
     const validations = Yup.object().shape({
