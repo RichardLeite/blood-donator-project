@@ -23,7 +23,7 @@ export class meus_dados_D extends Component {
             
             <div className='meus_agendamentos'>
                 <h1> Meus Agendamentos </h1>
-                <p> Por enquanto você não tem nenhum agendamento!<br></br>
+                <p> Por enquanto você não tem nenhum agendamento.<br></br>
                 Clique abaixo para realizar um agendamento! </p>
                 <Link to='/agendamento' className='links'>
                     <button > Realizar um Agendamento </button>
