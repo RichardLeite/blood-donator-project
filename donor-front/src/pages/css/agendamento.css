@@ -3,14 +3,11 @@
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     width: 490px;
-    height: 1300px;
+    height: 100% 0%;
+    padding: 20px 0px;
+    margin-top: 20px;
     border-left: 28px solid white;
     border-right: 28px solid white;
-}
-
-.agendamento h1 {
-    padding-top: 20px;
-    padding-bottom: 10px;
 }
 
 .agendamento button {

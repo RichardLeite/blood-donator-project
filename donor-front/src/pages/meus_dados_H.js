@@ -21,18 +21,11 @@ export class meus_dados_H extends Component {
 
                 <div className='meus_agendamentos'>
                     <h1> Meus Agendamentos </h1>
-                    <p> Por enquanto você não tem nenhum agendamento!<br></br>
+                    <p> Por enquanto você não tem nenhum agendamento.<br></br>
                     Clique abaixo para realizar um agendamento! </p>
-                    <Link to='/beneficios' className='links'>
+                    <Link to='/agendamento' className='links'>
                         <button > Realizar um Agendamento </button>
                         </Link>
-                    <div className='meus_beneficios'>
-                    <p> Você pode trocar seus pontos de agendamento por benefícios sempre que concluir uma 
-                        doação de sangue.<br></br> Clique no botão abaixo para ver os benefícios disponíveis</p>
-                        <Link to='/beneficios' className='links'>
-                        <button > Acessar Benefícios </button>
-                        </Link>
-                    </div>
                 </div>
             </div>
             </center>

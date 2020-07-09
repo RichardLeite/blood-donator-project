@@ -3,14 +3,11 @@
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     width: 1000px;
-    height: 1050px;
+    height: 100% 0%;
+    padding: 20px 0px;
+    margin-top: 20px;
     border-left: 28px solid white;
     border-right: 28px solid white;
-}
-
-div.apoiadores h1 {
-    border-radius: 8px;
-    border-top: 30px solid white;
 }
 
 ul.apoiadores li {   

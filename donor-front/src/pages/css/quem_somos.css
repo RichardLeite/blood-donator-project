@@ -3,7 +3,8 @@
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     width: 1000px;
-    height: 3300px;
+    height: 100% 0%;
+    padding-bottom: 20px;
     border-left: 28px solid white;
     border-right: 28px solid white;
 }
@@ -41,7 +42,7 @@ p.quem_somos strong{
     color: #ec1940;
 }
 
-/* .quem_somos*/ img { 
+/* .quem_somos */ img {
     border-radius: 8px;
     box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.80);
     margin: 10px 0px 10px 0px;

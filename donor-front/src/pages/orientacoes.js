@@ -79,7 +79,7 @@ export class orientacoes extends Component {
                     </li>
                 </ul>
                 </div>
-                </div>
+            </div>
             </center>
         )
    }

@@ -1,60 +1,143 @@
-import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+// import { Link } from 'react-router-dom';
 import './css/agendamento.css';
+import { ErrorMessage, Formik, Form, Field, } from 'formik';
+import * as Yup from 'yup';
+import axios from "axios";
+import history from '../components/auth/history';
 
-export class agendamento extends Component {
-    render() {
-        return (
-            <center>
-            <div className='agendamento'>
-                <h1>Agendamento</h1>
-                <p>Confirme sua Data Nascimento</p><input type='date'></input>
-                <p>Peso</p><input type="number" placeholder="0.0" step="0.01" min="0" max="100"></input>
-                <p>Tipo Sanguíneo</p>
-                <select className="sangue">
-                <option value="a+"> A+ </option> 
-                <option value="a-"> A- </option>
-                <option value="b+"> B+ </option>
-                <option value="b-"> B- </option> 
-                <option value="ab+"> AB- </option>
-                <option value="ab-"> AB+ </option>
-                <option value="o+"> O+ </option> 
-                <option value="o-"> O- </option>
-                </select>
-                <p>Consumo de bebidas Alcoólicas</p>
-                <select className="bebidas">
-                <option value="sim"> Sim </option>
-                <option value="nao"> Não </option>
-                </select>
-                <p> Consome tabaco ou/e é usuário de drogas ilícitas</p>
-                <select className="drogas">
-                <option value="tabaco"> Consumo Tabaco </option>
-                <option value="drogas"> Faço uso de Drogas Ilícitas </option>
-                <option value="ambos"> Ambos </option>
-                <option value="nenhum"> Nenhuma das Opções </option>
-                </select>
-                <p> Possui Doenças Infecciosas </p>
-                <select className="doenças">
-                <option value="sim"> Sim </option>
-                <option value="nao"> Não </option>
-                </select>
-                <p>CEP</p><input></input>
-                <p>Endereço</p><input></input>
-                <p>Número</p><input type='number'></input>
-                <p>Bairro</p><input></input>
-                <p>Cidade</p><input></input>
-                <p>Estado</p><input></input>
-                <p>Telefone/Celular para Contato</p><input></input>
-                <p>Data que pretende o sangue</p><input type='date'></input>
-                <p>Horário de disponibilidade para doação</p><input type='time'></input>
+// axios.get('http://localhost:3333/agendamentos').then(function(data){
+//     console.log(data)
+// })
+
+const agendamento = () => {
+
+    const handleSubmit = values => {
+        axios.post('http://localhost:3333/agendamentos', values)
+        .then(resp => { //console.log(resp)
+            // const { data } = resp
+            // if(data){
+                history.push('/endereco')
+            //  }
+        })
+    }
+    const validations = Yup.object().shape({
+        peso: Yup.number('Digite um Peso válido (ex:50.00)')
+        .required('Digite um Peso válido (ex:50.00)'),
+        tipo_sanguineo: Yup.string()
+        .required('Este campo é Obrigatório'),
+        sexo: Yup.string()
+        .required('Este campo é Obrigatório'),
+        bebidas_alcoolicas: Yup.string()
+        .required('Este campo é Obrigatório'),
+        usuario_tabaco: Yup.string()
+        .required('Este campo é Obrigatório'),
+        drogas_ilicitas: Yup.string()
+        .required('Este campo é Obrigatório'),
+        doenca_infecciosas: Yup.string()
+        .required('Este campo é Obrigatório'),
+        data_agendamento: Yup.string()
+        .required('Este campo é Obrigatório'),
+        horas_doacao: Yup.string()
+        .required('Este campo é Obrigatório'),
+        
+        
+    })
+    return (
+        <>
+        <center>
+        <div className='agendamento'>
+        <h1>Agendamento</h1>
+            <Formik initialValues={{}} onSubmit={handleSubmit} validationSchema={validations}>
+            <Form>
+                <div className='form'>
+
+                <p>Peso</p>
+                <Field name='peso'type="number" placeholder="0.0" min="0" max="100"/>
+                <ErrorMessage component='span' name='peso'/>
                 <br></br>
-                <Link to='/meus_dados_D' className='links'>
-                <button >Salvar Agendamento</button>
-                </Link>
+
+                <p>Tipo Sanguíneo</p>
+                <Field name='tipo_sanguineo' as="select">
+                <option value="A+"> A+ </option> 
+                <option value="A-"> A- </option>
+                <option value="B+"> B+ </option>
+                <option value="B-"> B- </option> 
+                <option value="AB+"> AB- </option>
+                <option value="AB-"> AB+ </option>
+                <option value="O+"> O+ </option> 
+                <option value="O-"> O- </option>
+                </Field>
+                <ErrorMessage component='span' name='tipo_sanguineo'/>
+                <br></br>
+                
+                <p> Sexo </p>
+                <Field name='sexo' as='select'>
+                <option value="true"> Masculino </option>
+                <option value="false"> Feminino </option>
+                </Field>
+                <ErrorMessage component='span' name='sexo'/>
+                <br></br>
+
+                <p>Consumo de bebidas Alcoólicas?</p>
+                <Field name='bebidas_alcoolicas' as='select'>
+                <option value="true"> Sim </option>
+                <option value="false"> Não </option>
+                </Field>
+                <ErrorMessage component='span' name='bebidas_alcoolicas'/>
+                <br></br>
+                
+                <p> Consome tabaco? </p>
+                <Field name='usuario_tabaco' as='select'>
+                <option value="true"> Sim </option>
+                <option value="false"> Não </option>
+                </Field>
+                <ErrorMessage component='span' name='usuario_tabaco'/>
+                <br></br>
+                
+                <p> É usuário de drogas ilícitas? </p>
+                <Field name='drogas_ilicitas' as='select'>
+                <option value="true"> Sim </option>
+                <option value="false"> Não </option>
+                </Field>
+                <ErrorMessage component='span' name='drogas_ilicitas'/>
+                <br></br>
+                
+                <p> Possui Doenças Infecciosas? </p>
+                <Field name='doenca_infecciosas'  as='select'>
+                <option value="true"> Sim </option>
+                <option value="false"> Não </option>
+                </Field>
+                <ErrorMessage component='span' name='doenca_infecciosas'/>
+                <br></br>
+
+                <p>Data que pretende o sangue</p>
+                <Field type='date' name='data_agendamento'/>
+                <ErrorMessage component='span' name='data_agendamento'/>
+                <br></br>
+
+                <p>Horário de disponibilidade para doação</p>
+                <Field type='time' name='horas_doacao'/>
+                <ErrorMessage component='span' name='horas_doacao'/>
+                <br></br>
+
+                {/* //<Field type='number' name='id_doadores'>`${id}`</Field>/> */}
+
+                <br></br>
+                <br></br>
+                <p className='trocalogin'> Você precisa cadastrar seu endereço antes de finalizar o Agendamento</p>
+
+                {/* <Link to='/meus_dados_D' className='links'> */}
+                <button type='submit'> Cadastrar meu Endereço!</button>
+                {/* </Link> */}
             </div>
-            </center>
-        )
-   }
-};
+            </Form>
+        </Formik>
+        <br></br>
+        </div>
+        </center>
+    </>
+)
+}
 
 export default agendamento;
